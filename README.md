@@ -8,6 +8,8 @@ Dorkcoin is a playful memecoin built for the internet’s proud misfits — the 
 
 For more information about Dorkcoin itself, see https://dorkcoin.org.
 
+Telegram group for more info: Dorkcoin POS crypto coin: https://t.me/+SBkXoOBZ-wNmMWNh
+
 What is Dork Core?
 ----------------
 
