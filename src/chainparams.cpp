@@ -159,6 +159,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x75bc1a80e13213ada9e18dac132c3c8d3c03ff3d1bcc7aec73f5f35155b8518a"));
 
         vSeeds.push_back(CDNSSeedData("explorer.dorkcoin.org", "213.181.99.70"));
+        vSeeds.push_back(CDNSSeedData("216.128.144.174", "216.128.144.174"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,30);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,31);
