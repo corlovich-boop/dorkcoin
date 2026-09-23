@@ -1491,8 +1491,9 @@ bool AppInit2(Config& config, boost::thread_group& threadGroup, CScheduler& sche
 
     // Either install a handler to notify us when genesis activates, or set fHaveGenesis directly.
     // No locking, as this happens before any background thread is started.
+    boost::signals2::connection conn_BlockNotifyGenesisWait;
     if (chainActive.Tip() == NULL) {
-        uiInterface.NotifyBlockTip.connect(BlockNotifyGenesisWait);
+        conn_BlockNotifyGenesisWait = uiInterface.NotifyBlockTip.connect(BlockNotifyGenesisWait);
     } else {
         fHaveGenesis = true;
     }
@@ -1515,7 +1516,7 @@ bool AppInit2(Config& config, boost::thread_group& threadGroup, CScheduler& sche
         while (!fHaveGenesis) {
             condvar_GenesisWait.wait(lock);
         }
-        uiInterface.NotifyBlockTip.disconnect(BlockNotifyGenesisWait);
+        conn_BlockNotifyGenesisWait.disconnect();
     }
 
     // ********************************************************* Step 11: start node
