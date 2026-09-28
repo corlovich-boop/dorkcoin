@@ -276,8 +276,8 @@ then :
     printf "%s\n" "$0: be upgraded to zsh 4.3.4 or later."
   else
     printf "%s\n" "$0: Please tell bug-autoconf@gnu.org and
-$0: https://github.com/dorkcoinorg/dorkcoin about your system,
-$0: including any error possibly output before this
+$0: https://github.com/dorkcoinorg/dorkcoin about your
+$0: system, including any error possibly output before this
 $0: message. Then install a modern shell, or manually run
 $0: the script under such a shell if you do have one."
   fi
